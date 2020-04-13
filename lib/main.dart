@@ -50,18 +50,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        centerTitle: true,
-        backgroundColor: Colors.blue[500],
-      ),
       body: Container(
-        padding: const EdgeInsets.only(top: 50.0),
+        padding: const EdgeInsets.only(top: 25.0),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: const AssetImage('assets/images/background_1.jpeg'),
+            image: const AssetImage('assets/images/background_2.jpg'),
             colorFilter: ColorFilter.mode(
-              Colors.green.withOpacity(0.7),
+              Colors.black.withOpacity(0.1),
               BlendMode.softLight,
               ),
             fit: BoxFit.fill
@@ -71,12 +66,11 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Row(
+            Expanded( child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 RaisedButton(
                   onPressed: () => _sendMessage('1+'),
-                  padding: const EdgeInsets.all(8.0),
                   elevation:9.0,
                   shape: CircleBorder(
                     side: BorderSide(
@@ -85,33 +79,34 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   child: Icon(
                       Icons.keyboard_arrow_up,
-                      size:100,
-                      color: Colors.green[800],
+                      size:80,
+                      color: Colors.greenAccent[400],
                   ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                 ),
               ],
-            ),
-            Row(
+            )),
+            Expanded( child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 RaisedButton(
                   onPressed: () => _sendMessage('3+'),
-                  padding: const EdgeInsets.all(8.0),
                   elevation:9.0,
                   shape: CircleBorder(
                     side: BorderSide(color: Colors.grey[800]),
                     ),
                   child: Icon(
                     Icons.keyboard_arrow_left,
-                    size:100,
-                    color: Colors.blue[600],
+                    size:80,
+                    color: Colors.greenAccent[400],
                   ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                 ),
                 RaisedButton(
                   onPressed: () => _sendMessage('5+'),
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(6.0),
                   elevation:9.0,
                   shape: CircleBorder(
                     side: BorderSide(
@@ -120,14 +115,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   child: Icon(
                     Icons.stop,
-                    size:100,
+                    size:70,
                     color: Colors.red[600],
                   ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                 ),
                 RaisedButton(
                   onPressed: () => _sendMessage('4+'),
-                  padding: const EdgeInsets.all(8.0),
                   elevation:9.0,
                   shape: CircleBorder(
                     side: BorderSide(
@@ -136,13 +131,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   child: Icon(
                     Icons.keyboard_arrow_right,
-                    size:100,
-                    color: Colors.blue[600],
+                    size:80,
+                    color: Colors.greenAccent[400],
                   ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                 ),
               ],
-            ),
+            )),
             Expanded( child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -160,10 +156,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     'Heart',
                     style: TextStyle(
                       fontSize: 23,
-                      color: Colors.blue,
+                      color: Colors.orange[300],
                       ),
                     ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                   ),
                 RaisedButton(
                   onPressed: () => _sendMessage('7+'),
@@ -179,10 +176,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     'Fire',
                     style: TextStyle(
                       fontSize: 23,
-                      color: Colors.blue,
+                      color: Colors.orange[300],
                       ),
                     ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                 ),
                 RaisedButton(
                   onPressed: () => _sendMessage('8+'),
@@ -198,10 +196,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     'Skull',
                     style: TextStyle(
                       fontSize: 23,
-                      color: Colors.blue,
+                      color: Colors.orange[300],
                       ),
                     ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                   ),
               ],
             )),
@@ -222,10 +221,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     'Hello',
                     style: TextStyle(
                       fontSize: 23,
-                      color: Colors.blue,
+                      color: Colors.orange[300],
                       ),
                     ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                   ),
                 RaisedButton(
                   onPressed: () => _sendMessage('10+'),
@@ -241,10 +241,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     'Punch',
                     style: TextStyle(
                       fontSize: 23,
-                      color: Colors.blue,
+                      color: Colors.orange[300],
                       ),
                     ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                 ),
                 RaisedButton(
                   onPressed: () => _sendMessage('11+'),
@@ -259,11 +260,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     'Dance',
                     style: TextStyle(
-                      fontSize: 23, color:
-                      Colors.blue,
+                      fontSize: 23,
+                      color: Colors.orange[300],
                       ),
                     ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                   ),
               ],
             )),
@@ -273,7 +275,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 RaisedButton(
                   onPressed: () => _sendMessage('15+'),
-                  padding: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(15.0),
                   elevation:9.0,
                   shape: CircleBorder(
                     side: BorderSide(
@@ -282,10 +284,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   child: Icon(
                       Icons.home,
-                      size:70,
+                      size:50,
                       color: Colors.yellow[800],
                   ),
-                  color: Colors.black.withOpacity(0.25),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
                 ),
               ],
             ),
