@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 void main() async {
   Socket sock;
   try {
-    sock = await Socket.connect('10.0.2.2', 6969);
+    sock = await Socket.connect('192.168.4.1', 80);
   } catch(err) {
     print('Caught error: $err');
   }
@@ -85,6 +85,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.black.withOpacity(0.45),
                   splashColor: Colors.blue[400].withOpacity(0.45),
                 ),
+                RaisedButton(
+                  onPressed: () => _sendMessage('2+'),
+                  elevation:9.0,
+                  shape: CircleBorder(
+                    side: BorderSide(
+                      color: Colors.grey[800],
+                      ),
+                    ),
+                  child: Icon(
+                      Icons.arrow_upward,
+                      size:80,
+                      color: Colors.greenAccent[400],
+                  ),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
+                ),
               ],
             )),
             Expanded( child: Row(
@@ -153,7 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   child: Text(
-                    'Heart',
+                    'Pushup',
                     style: TextStyle(
                       fontSize: 23,
                       color: Colors.orange[300],
@@ -173,7 +189,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   child: Text(
-                    'Fire',
+                    'Updown',
                     style: TextStyle(
                       fontSize: 23,
                       color: Colors.orange[300],
@@ -193,7 +209,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   child: Text(
-                    'Skull',
+                    'Jump',
                     style: TextStyle(
                       fontSize: 23,
                       color: Colors.orange[300],
@@ -238,7 +254,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   child: Text(
-                    'Punch',
+                    'Frontback',
                     style: TextStyle(
                       fontSize: 23,
                       color: Colors.orange[300],
@@ -269,12 +285,97 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
               ],
             )),
+            Expanded( child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                RaisedButton(
+                  onPressed: () => _sendMessage('12+'),
+                  padding: const EdgeInsets.all(20.0),
+                  elevation:9.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(45),
+                    side: BorderSide(
+                      color: Colors.grey[800],
+                    ),
+                  ),
+                  child: Text(
+                    'Moonwalk',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.orange[300],
+                      ),
+                    ),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
+                  ),
+                RaisedButton(
+                  onPressed: () => _sendMessage('15+'),
+                  padding: const EdgeInsets.all(20.0),
+                  elevation:9.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(45),
+                    side: BorderSide(
+                      color: Colors.grey[800],
+                    ),
+                  ),
+                  child: Text(
+                    'Omniwalk R',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.orange[300],
+                      ),
+                    ),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
+                ),
+                RaisedButton(
+                  onPressed: () => _sendMessage('16+'),
+                  padding: const EdgeInsets.all(20.0),
+                  elevation:9.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(45),
+                    side: BorderSide(
+                      color: Colors.grey[800],
+                      ),
+                ),
+                  child: Text(
+                    'Omniwalk L',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.orange[300],
+                      ),
+                    ),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
+                  ),
+              ],
+            )),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
                 RaisedButton(
-                  onPressed: () => _sendMessage('15+'),
+                  onPressed: () => _sendMessage('13+'),
+                  padding: const EdgeInsets.all(20.0),
+                  elevation:9.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(45),
+                    side: BorderSide(
+                      color: Colors.grey[800],
+                    ),
+                  ),
+                  child: Text(
+                    'Zero',
+                    style: TextStyle(
+                      fontSize: 23,
+                      color: Colors.orange[300],
+                      ),
+                    ),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
+                ),
+                RaisedButton(
+                  onPressed: () => _sendMessage('19+'),
                   padding: const EdgeInsets.all(15.0),
                   elevation:9.0,
                   shape: CircleBorder(
@@ -287,6 +388,26 @@ class _MyHomePageState extends State<MyHomePage> {
                       size:50,
                       color: Colors.yellow[800],
                   ),
+                  color: Colors.black.withOpacity(0.45),
+                  splashColor: Colors.blue[400].withOpacity(0.45),
+                ),
+                RaisedButton(
+                  onPressed: () => _sendMessage('14+'),
+                  padding: const EdgeInsets.all(20.0),
+                  elevation:9.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(45),
+                    side: BorderSide(
+                      color: Colors.grey[800],
+                    ),
+                  ),
+                  child: Text(
+                    'Init',
+                    style: TextStyle(
+                      fontSize: 23,
+                      color: Colors.orange[300],
+                      ),
+                    ),
                   color: Colors.black.withOpacity(0.45),
                   splashColor: Colors.blue[400].withOpacity(0.45),
                 ),
