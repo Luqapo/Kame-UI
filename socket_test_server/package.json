@@ -1,0 +1,11 @@
+{
+  "name": "socket_test_server",
+  "version": "1.0.0",
+  "description": "test server for dev Flutter app to controll Kame spider",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucjan Wiśnicz",
+  "license": "ISC"
+}
